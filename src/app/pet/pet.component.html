@@ -1,0 +1,47 @@
+
+<form
+  (submit)="save(pets.value, petName.value, age.value, sexOfTheAnimal.value, city.value, emailOfTheOwner.value ,phoneNumberOfTheOwner.value)">
+  <div class="form-group">
+    <label for="pets">Pets</label>
+    <input type="text" class="form-control" id="pets" #pets>
+  </div>
+  <div class="form-group">
+    <label for="petName">PetName</label>
+    <input type="text" class="form-control" id="petName" #petName>
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="text" class="form-control" id="age" #age>
+  </div>
+  <div class="form-group">
+    <label for="sexOfTheAnimal">Sex</label>
+    <input type="email" class="form-control" id="sexOfTheAnimal" #sexOfTheAnimal>
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <input type="text" class="form-control" id="city" #city>
+  </div>
+  <div class="form-group">
+    <label for="emailOfTheOwner">Email</label>
+    <input type="text" class="form-control" id="emailOfTheOwner" #emailOfTheOwner>
+  </div>
+  <div class="form-group">
+    <label for="phoneNumberOfTheOwner">PhoneNumber</label>
+    <input type="text" class="form-control" id="phoneNumberOfTheOwner" #phoneNumberOfTheOwner>
+  </div>
+  <button type="submit" style="width: 100%" class="btn btn-outline-primary">Create</button>
+</form>
+
+<div class="card-group">
+  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" *ngFor="let pe of p">
+    <div class="card-header">{{pe.pets}} {{pe.petName}}</div>
+    <div class="card-body">
+      <h5 class="card-title">Возраст: {{pe.age}} | Пол: {{pe.sexOfTheAnimal}}</h5>
+      <p class="card-text">{{pe.emailOfTheOwner}}</p>
+    </div>
+    <div class="card-footer">
+      {{pe.phoneNumberOfTheOwner}}
+    </div>
+  </div>
+</div>
+
